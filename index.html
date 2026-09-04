@@ -1,193 +1,201 @@
-
-
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">  
-    <title>Portifólio Pessoal</title>
-    <style>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lauro Golemba Junior</title>
+<meta name="description" content="Página pessoal de Lauro Golemba Junior. LinkedIn, GitHub e contato.">
+<meta name="theme-color" content="#232526">
 
-      body {
-        background: #232526;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&amp;display=swap" rel="stylesheet">
 
-        .container {
-          width: 100%;
-          height: 100%;
-          padding-right: 15px;
-          padding-left: 15px;
-          margin-right: auto;
-          margin-left: auto;
-        }
+<style>
+:root {
+  --grafite: #232526;
+  --creme:   #fdf5e6;
+  --ambar:   #ffcc66;
+  --linha:   rgba(253, 245, 230, 0.16);
+}
 
-        .image {
-          background-image: url("https://static.vecteezy.com/ti/vetor-gratis/p1/23402465-homem-avatar-gratis-vetor.jpg");
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: center; 
-          width: 200px;
-          height: 200px;
-          border-radius: 50%;
-          margin: 0 auto;
-          border: 5px solid #fdf5e6;
-        }
+*, *::before, *::after { box-sizing: border-box; }
 
-        a {
-          font-size: large;
-        }
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
 
-        .w3-border {
-          border: 3px solid #ccc !important;
-        }
+  background: var(--grafite);
+  background-image:
+    radial-gradient(60rem 40rem at 50% -10%, rgba(255, 204, 102, 0.10), transparent 60%),
+    linear-gradient(160deg, #414345, #232526 65%);
+  background-attachment: fixed;
 
-        .links-container {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          gap: 20px;
-        }
+  font-family: "Manrope", "Segoe UI", Roboto, system-ui, sans-serif;
+  color: var(--creme);
+  -webkit-font-smoothing: antialiased;
+}
 
-        .links-container a {
-          width: 100%;
-          color: #414345 !important;
-          transition: 0.2s;
-        }
+.cartao {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  padding: 40px 30px 34px;
+  border: 1px solid var(--linha);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.035);
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.7);
+}
 
-        .links-container a:hover {
-          opacity: 1;
-        }
+/* ---------- foto ---------- */
+.foto {
+  display: block;
+  width: 168px;
+  height: 168px;
+  margin: 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 0%;
+  border: 3px solid var(--creme);
+  outline: 1px solid rgba(255, 204, 102, 0.55);
+  outline-offset: 5px;
+}
 
-        .profession {
-          margin-top: 15px !important;
-        }
+/* ---------- identificação ---------- */
+h1 {
+  margin: 26px 0 0;
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: var(--ambar);
+}
 
-        .profession span {
-          font-size: 14px;
-        }
+.legenda {
+  margin: 8px 0 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: rgba(253, 245, 230, 0.66);
+}
 
-        .icons {
-          display: flex;
-          justify-content: center;
-          gap: 10px;
-        }
+/* ---------- links principais ---------- */
+.links {
+  display: grid;
+  gap: 12px;
+  margin-top: 30px;
+}
 
-        .icons a {
-          text-decoration: none;
-        }
+.link {
+  display: block;
+  padding: 13px 18px;
+  border-radius: 10px;
+  border: 1px solid var(--linha);
+  background: rgba(253, 245, 230, 0.06);
+  color: var(--creme);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: background-color .18s ease, border-color .18s ease, transform .18s ease;
+}
 
-        .icons a svg {
-          fill: #fdf5e6 !important;
-          transform: scale(1);
-        }
+.link:hover {
+  background: rgba(253, 245, 230, 0.13);
+  border-color: rgba(253, 245, 230, 0.4);
+  transform: translateY(-2px);
+}
 
-        .border {
-          border: 3px ridge #fdf5e6;
-        }
+.link--destaque {
+  background: var(--ambar);
+  border-color: var(--ambar);
+  color: var(--grafite);
+}
+.link--destaque:hover { background: #ffd782; border-color: #ffd782; }
 
-        .contact {
-          text-align: center;
-          color: #fdf5e6;
-        }
+/* ---------- contato ---------- */
+.contato {
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid var(--linha);
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+}
 
-        .contact .info {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          gap: 15px;
-        }
+.contato a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--creme);
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: color .18s ease;
+}
+.contato a:hover { color: var(--ambar); }
 
-        .contact .info span {
-          display: flex;
-          align-items: center;
-          gap: 15px;
-        }
+.contato svg {
+  width: 17px;
+  height: 17px;
+  stroke: var(--ambar);
+  flex: none;
+}
 
-        .bio {
-          font-size: 11px;
-          text-align: center;
-        }
+/* ---------- acessibilidade ---------- */
+a:focus-visible {
+  outline: 2px solid var(--ambar);
+  outline-offset: 3px;
+}
 
-        @media screen and (min-width: 768px) {
-          .link {
-            width: 100%;
-          }
+@media (prefers-reduced-motion: reduce) {
+  .link { transition: none; }
+  .link:hover { transform: none; }
+}
 
-          a {
-            font-size: x-large;
-          }
+@media (max-width: 380px) {
+  .cartao { padding: 32px 22px 28px; }
+  .foto { width: 140px; height: 140px; }
+  h1 { font-size: 1.35rem; }
+}
+</style>
+</head>
 
-        }
-        @media screen and (min-width: 576px) {
-          .container {
-            max-width: 540px;
-          }
+<body>
 
-          .profession span {
-            font-size: 24px;
-          }
-          
-          .bio {
-            font-size: 15px;
-          }
+  <main class="cartao">
 
-        }
+    <img class="foto" src="foto-perfil.jpg" alt="Retrato de Lauro Golemba Junior" width="168" height="168">
 
-    </style>
-    <script src="https://unpkg.com/feather-icons"></script>
-  </head>
-  <body>
-    <!-- Content container -->
-    <div class="container">
+    <h1>LAURO GOLEMBA JUNIOR</h1>
+    <p class="legenda">Análise e Desenvolvimento de Sistemas &middot; Maringá, PR</p>
 
-      <!-- Image and name container -->
-      <div class="w3-margin-top" style="text-align: center">
-        <div class="image w3-round"></div>
-        <p class="profession"><span class="w3-padding w3-margin" style="color: #ffcc66">LAURO GOLEMBA JUNIOR</span></span></p>
-        <p class="bio"><span class="w3-padding w3-margin" style="font-weight: bolder; color: #fdf5e6">INFORMAÇÕES PESSOAIS</span></p><br>
-      </div>
+    <nav class="links">
+      <a class="link" href="https://www.linkedin.com/in/lauro-golemba-jr-2949a3426" target="_blank" rel="noopener">LINKEDIN</a>
+      <a class="link" href="https://github.com/golemba-lauro" target="_blank" rel="noopener">GITHUB</a>
 
-      <!-- Links section 1 -->
-      <div class="links-container">
-        <a href="#" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">LINKEDIN</a>
-        <a href="#" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">INSTAGRAM</a>
-        <a href="#" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">CURRÍCULO VIRTUAL</a>
-      </div>
-      
-      <!-- Links section 2 -->
-      <div class="icons w3-padding">
-        <a href="#" target="_blank">
-          <i data-feather="facebook"></i>
-        </a>
-        <a href="#" target="_blank">
-          <i data-feather="twitter"></i>
-        </a>
-        <a href="#" target="_blank">
-          <i data-feather="linkedin"></i>
-        </a>
-        <a href="#" target="_blank">
-          <i data-feather="github"></i>
-        </a>
-      </div><br>
-      
-        <div class="contact">
-          <p class=""><span class="w3-padding w3-margin" style="font-weight: bolder; color: #fdf5e6">CONTATO</span></p>
-          <div class="info">
-            <a href = "tel: (044)99902-8139"><span><i data-feather="phone"></i> (044)99902-8139</span></a>
-            <a href = "mailto: golembalauro@hotmail.com"><span><i data-feather="mail"></i> golembalauro@hotmail.com</span></a>
-          </div>
-        </div><br>
-        <div class="contact">
+      <!-- Suba o PDF do currículo nesta mesma pasta e o botão já funciona -->
+      <a class="link link--destaque" href="curriculo.pdf">CURRÍCULO VIRTUAL</a>
+
+      <!-- Para reativar o Instagram, tire o comentário e ponha o seu endereço:
+      <a class="link" href="https://instagram.com/SEU-USUARIO" target="_blank" rel="noopener">INSTAGRAM</a>
+      -->
+    </nav>
+
+    <div class="contato">
+      <a href="tel:+5544999028139">
+        <i data-feather="phone"></i> (44) 99902-8139
+      </a>
+      <a href="mailto:golembalauro@hotmail.com">
+        <i data-feather="mail"></i> golembalauro@hotmail.com
+      </a>
     </div>
 
-    </div>
-    <script>
-      feather.replace()
-    </script>
-  </body>  
+  </main>
+
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>feather.replace()</script>
+
+</body>
 </html>
